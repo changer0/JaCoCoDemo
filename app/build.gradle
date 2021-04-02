@@ -67,8 +67,11 @@ task jacocoTestReport(type: JacocoReport) {
     executionData.from = files("$buildDir/outputs/code-coverage/connected/coverage.ec")
 
     doFirst {
+
         new File("$buildDir/intermediates/javac/").eachFileRecurse { file ->
+            println "FileName:${file.name}"
             if (file.name.contains('$$')) {
+                println "FileName:${file.name}"
                 file.renameTo(file.path.replace('$$', '$'))
             }
         }

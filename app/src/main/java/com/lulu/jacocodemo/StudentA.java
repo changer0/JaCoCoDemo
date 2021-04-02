@@ -11,4 +11,11 @@ public class StudentA {
         //触发行为
         System.out.println(msg);
     }
+
+    public class StudentAChild {
+        public void action(String msg) {
+            //触发行为
+            System.out.println(msg);
+        }
+    }
 }
