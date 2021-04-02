@@ -15,5 +15,6 @@ class MainActivity : AppCompatActivity() {
 
         StudentA().action("测试 A 同学")
         StudentB().action("测试 B 同学")
+        StudentA().StudentAChild().action("测试 A 的孩子")
     }
 }

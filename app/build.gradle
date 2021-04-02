@@ -6,7 +6,7 @@ plugins {
 }
 
 jacoco {//插件版本设置
-    toolVersion = "0.8.5"
+    toolVersion = "0.8.6"
 }
 
 
