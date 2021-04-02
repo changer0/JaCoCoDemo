@@ -29,6 +29,7 @@ public class JaCoCoUtils {
             out.write((byte[]) agent.getClass().getMethod("getExecutionData", boolean.class)
                     .invoke(agent, false));
             out.close();
+            Log.d(TAG, "generateCoverageReport() 成功");
         } catch (Exception e) {
             Log.d(TAG, e.toString(), e);
         }
