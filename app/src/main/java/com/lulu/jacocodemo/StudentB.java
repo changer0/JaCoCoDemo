@@ -10,5 +10,8 @@ public class StudentB {
     public void action(String msg) {
         //触发行为
         System.out.println(msg);
+
+        System.out.println("也发生了变化");
     }
+
 }
