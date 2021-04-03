@@ -9,19 +9,23 @@ def run_cmd(command):
     return subp.communicate()[0]
 
 cmd_result = run_cmd("git diff master develop")
-searchObj = re.findall( 'diff --git (.*) ', cmd_result, re.M|re.I)
+searchObj = re.findall( '^diff --git (.*) ', cmd_result, re.M|re.I)
 #print(cmd_result)
 #print(searchObj.group(0))
 path_key = "/main/java/"
 f = open("excludes.txt", "w+")
 for item in searchObj:
+    print("origin item: " , item)
     all_len = len(item)
     key_len = len(path_key)
-    print("path_key len: ", key_len)
-    find_index = item.find(path_key) + key_len
-    print(find_index)
+    #print("path_key len: ", key_len)
+    find_index = item.find(path_key)
+    if find_index < 0:
+        continue
+    print("发现路径:", find_index)
+    find_index = find_index + key_len
     result = item[find_index: all_len].split(".")[0]
-    print(result)
+    #print(result)
     f.write(result + "\n")
 # 关闭打开的文件
 f.close()
