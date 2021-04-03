@@ -18,6 +18,8 @@ class StudentA {
             } else {
                 println("这是一个空啊")
                 println("这是一个空啊")
+
+                println("为了测试新的文件")
             }
         }
     }
