@@ -1,0 +1,32 @@
+diff --git a/app/src/main/java/com/lulu/jacocodemo/StudentA.kt b/app/src/main/java/com/lulu/jacocodemo/StudentA.kt
+index 22fc03b..a639f18 100644
+--- a/app/src/main/java/com/lulu/jacocodemo/StudentA.kt
++++ b/app/src/main/java/com/lulu/jacocodemo/StudentA.kt
+@@ -18,6 +18,8 @@ class StudentA {
+             } else {
+                 println("这是一个空啊")
+                 println("这是一个空啊")
++
++                println("为了测试新的文件")
+             }
+         }
+     }
+diff --git a/app/src/main/java/com/lulu/jacocodemo/StudentB.java b/app/src/main/java/com/lulu/jacocodemo/StudentB.java
+index eaabff8..86f28e9 100644
+--- a/app/src/main/java/com/lulu/jacocodemo/StudentB.java
++++ b/app/src/main/java/com/lulu/jacocodemo/StudentB.java
+@@ -5,10 +5,13 @@ package com.lulu.jacocodemo;
+  */
+ public class StudentB {
+
+-    private String name;
++    private String name1;
+
+     public void action(String msg) {
+         //触发行为
+         System.out.println(msg);
++
++        System.out.println("也发生了变化");
+     }
++
+ }
