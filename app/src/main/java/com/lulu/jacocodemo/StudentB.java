@@ -5,7 +5,7 @@ package com.lulu.jacocodemo;
  */
 public class StudentB {
 
-    private String name;
+    private String name1;
 
     public void action(String msg) {
         //触发行为
